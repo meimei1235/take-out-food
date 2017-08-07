@@ -16,4 +16,4 @@ module.exports = function loadAllItems() {
     name: '冰锋',
     price: 2.00
   }];
-}
+};

@@ -5,4 +5,4 @@ module.exports = function loadPromotions() {
     type: '指定菜品半价',
     items: ['ITEM0001', 'ITEM0022']
   }];
-}
+};
