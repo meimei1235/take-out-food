@@ -3,7 +3,6 @@ const loadPromotions = require("../src/promotions.js");
 
 module.exports =
   function bestCharge(inputs) {
-<<<<<<< HEAD
     let allItems = loadAllItems();
     let promotions = loadPromotions();
     let items = get_items(inputs, allItems);
@@ -12,16 +11,6 @@ module.exports =
     console.log(menu);
     return menu;
   }
-=======
-  let allItems = loadAllItems();
-  let promotions = loadPromotions();
-  let items = get_items(inputs, allItems);
-  let discount = get_discount(items, promotions);
-  let menu = get_menu(items, discount);
-  console.log(menu);
-  return menu;
-}
->>>>>>> b6d7a5e1a552604f541d20be72b530b50e2e792b
 // let inputs = ["ITEM0001 x 1", "ITEM0013 x 2", "ITEM0022 x 1"];
 // bestCharge(inputs);
 function get_items(inputs, allItems) {
@@ -96,22 +85,14 @@ function get_menu(items, discount) {
   }
   if (discount.type == "满30减6") {
     menu = menu_top + "-----------------------------------\n" + "使用优惠:\n" + "满30减6元，省" + discount.save + "元\n"
-<<<<<<< HEAD
       + "-----------------------------------\n"+ "总计：" + (total - discount.save)+ "元\n"
       + "===================================";
     return menu;
   }
   if (discount.type == "指定半价") {
-    menu = menu_top + "-----------------------------------\n" + "使用优惠:\n" + "指定菜品半价(" +
-=======
-      + "-----------------------------------\n"+ "总计：" + (total - discount.save)+ "元\n"+ "===================================";
-    return menu;
-  }
-  if (discount.type == "指定半价") {
    menu = menu_top + "-----------------------------------\n" + "使用优惠:\n" + "指定菜品半价(" +
->>>>>>> b6d7a5e1a552604f541d20be72b530b50e2e792b
       discount.name.join("，") + ")，省" + discount.save + "元\n" +"-----------------------------------\n"+
-      "总计：" + (total - discount.save)+ "元\n"+ "===================================";
+      "总计：" + (total - discount.save)+ "元\n" + "===================================";
     return menu;
   }
 }
